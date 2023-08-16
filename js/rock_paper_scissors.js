@@ -10,8 +10,8 @@
 
 
 //user gives their choice
-const userSelection = prompt("choose",'');
-console.log(userSelection);
+const userChoice = prompt("choose",'');
+console.log(userChoice);
 
 
 // ================ get computer choice ================ 
@@ -29,8 +29,39 @@ const getComputerChoice = () => {
   
 // =============for running code=============
   console.log(getComputerChoice());
-  console.log(getComputerChoice());
-  console.log(getComputerChoice());
+  //console.log(getComputerChoice());
+  //console.log(getComputerChoice());
 
-//computer sends result 
+//============== compare choices ==============
+
+const determineWinner = (userChoice,computerChoice) => {
+  if( userChoice === computerChoice){
+    return 'The game was a tie!';
+  }
+  if(userChoice === 'rock'){
+    if(computerChoice === 'paper'){
+      return 'Computer won!';
+    }else{
+      return 'User won!';
+    }
+  }
+
+  if(userChoice === 'paper'){
+      if(computerChoice === 'scissors' || 'rock'){
+        return 'Computer won!';
+      }else{
+        return 'User won!';
+      }
+  }
+  if(userChoice === 'scissors'){
+    if(computerChoice === 'rock' || 'paper'){
+      return 'Computer won!'; 
+    }else{
+      return 'User won!';
+    }
+  }
+}
+
+console.log(determineWinner());
+  //computer sends result 
 
