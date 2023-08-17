@@ -8,7 +8,7 @@ userName = 'John';
 
 let admin;
 admin = userName;
-alert(admin);
+console.log(admin);
 
 
 
@@ -36,3 +36,32 @@ const myNewText = myText.replace('string','sausage');
 
 console.log(myText);
 console.log(myNewText);
+
+
+const myArray = ['I','love','chocolate','frogs'];
+const madeAString = myArray.join(''); //join connects all values in array i one string
+console.log(myArray);
+console.log(madeAString);
+
+// ======= POKUS ======
+const myNumber = Math.floor(Math.random()*3);
+console.log(myNumber);
+
+const myTest = myNumber + (Math.floor(Math.random()*10));
+console.log(myTest);
+//======================
+
+function hello(name = "Chris") {
+    console.log(`Hello ${name}!`);
+}
+
+hello('Ari');
+hello();
+
+// ========== ANONYMOUS FUNCTION ==========
+
+function myFavoriteCar(car) {
+    return car + " is my favorite car";
+}
+
+console.log(myFavoriteCar('BMW'));
