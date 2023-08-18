@@ -65,3 +65,13 @@ function myFavoriteCar(car) {
 }
 
 console.log(myFavoriteCar('BMW'));
+
+const button = document.querySelector("button");
+function greet() {
+    const name = prompt("What is your name?");
+    alert(`Hello ${name}, nice to meet you!`);
+}
+
+window.addEventListener("click", greet);
+
+
