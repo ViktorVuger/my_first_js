@@ -1,29 +1,30 @@
-//give value to elements
-//const rock = "1";
-//const paper = "2";
-//const scissors = "3";
-
-//rock < paper;
-//paper < scissors;
-//scissors < rock;
-//========================
-
 
 //user gives their choice
-const userChoice = prompt("choose",'');
+let userChoice = prompt("choose",'');
 console.log(userChoice);
 
+const player = () => {
+  switch(userChoice){
+    case 'rock':
+      return 1;
+    case 'paper':
+      return 2;
+    case 'scissors':
+      return 3;
+  }
+}
+console.log(player());
 
 // ================ get computer choice ================ 
 const getComputerChoice = () => {
     let randomNumber = Math.floor(Math.random()*3);//Random number is for 3 choices between 0 and 2
     switch(randomNumber){
     case 0:
-      return'rock';
+      return 1;
     case 1:
-      return'paper';
+      return 2;
     case 2:
-      return'scissors';
+      return 3;
   }
   }
   
@@ -32,35 +33,24 @@ const getComputerChoice = () => {
   //console.log(getComputerChoice());
   //console.log(getComputerChoice());
 
-//============== compare choices ==============
+// ========== mapping choices ==========
 
-const determineWinner = (userChoice,computerChoice) => {
-  if( userChoice === computerChoice){
-    return 'The game was a tie!';
-  }
-  if(userChoice === 'rock'){
-    if(computerChoice === 'paper'){
-      return 'Computer won!';
-    }else{
-      return 'User won!';
-    }
-  }
 
-  if(userChoice === 'paper'){
-      if(computerChoice === 'scissors' || 'rock'){
-        return 'Computer won!';
-      }else{
-        return 'User won!';
-      }
+  //============== compare choices ==============
+
+const determineWinner = (player(),getComputerChoice()) => {
+  if (player - getComputerChoice=== 0){
+    return('its a tie');
   }
-  if(userChoice === 'scissors'){
-    if(computerChoice === 'rock' || 'paper'){
-      return 'Computer won!'; 
-    }else{
-      return 'User won!';
-    }
+  else if( player - getComputerChoice === 1) {
+    return('player wins!');
+  }
+  else {
+    return('computer wins!');
   }
 }
+
+
 
 console.log(determineWinner());
   //computer sends result 
