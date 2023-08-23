@@ -1,0 +1,20 @@
+.container {
+    border: 5px, red, solid;
+}
+
+.box {
+    border: 2px solid,red;
+    width: 100px;
+    height: 50px;
+
+}
+
+div {
+    border: 5px solid, red;
+    margin: 20px;
+    
+}
+
+header {
+    border: 5px;
+}
