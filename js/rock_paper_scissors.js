@@ -16,20 +16,14 @@ const player = () => {
 console.log(player());
 
 // ================ get computer choice ================ 
-const getComputerChoice = () => {
-    let randomNumber = Math.floor(Math.random()*3);//Random number is for 3 choices between 0 and 2
-    switch(randomNumber){
-    case 0:
-      return 1;
-    case 1:
-      return 2;
-    case 2:
-      return 3;
-  }
-  }
+const getComputerChoice =  Math.floor(Math.random()*3)+1;//Random number is for 3 choices between 0 and 2
+
+
+
+const computerChoice = getComputerChoice;
   
 // =============for running code=============
-  console.log(getComputerChoice());
+  console.log(computerChoice );
   //console.log(getComputerChoice());
   //console.log(getComputerChoice());
 
@@ -38,20 +32,23 @@ const getComputerChoice = () => {
 
   //============== compare choices ==============
 
-const determineWinner = (player(),getComputerChoice()) => {
-  if (player - getComputerChoice=== 0){
-    return('its a tie');
-  }
-  else if( player - getComputerChoice === 1) {
+
+//console.log(determineWinner());
+  //computer sends result 
+
+// const choice1 = 1;
+// const choice2 = 1;
+
+const getWinner = (choice1, choice2) => {
+  if( choice1 - choice2  > 0 ) {
     return('player wins!');
-  }
-  else {
+  }else if (choice1 - choice2 === 0){
+    return('its a tie');
+  }else {
     return('computer wins!');
   }
 }
 
 
-
-console.log(determineWinner());
-  //computer sends result 
-
+const winner = getWinner(player(), computerChoice);
+console.log(winner);
