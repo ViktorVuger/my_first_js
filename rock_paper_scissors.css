@@ -8,6 +8,7 @@ body {
 
 header {
     border:  3px solid red;
+    height: 500px;
     display: flex;
     flex-direction: column;
     background-color: rgb(1, 2, 16);
@@ -26,6 +27,11 @@ header {
 #header_text {
     font-size: 45px;
     padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#header_rules {
+    margin-top: 0;
 }
 
 .box {
@@ -50,6 +56,11 @@ div {
 
     position: relative;
     
+}
+
+#computer_character  {
+    background-image:url('ch_computer.png');
+    background-position: center;
 }
 
 .hp_bar {
