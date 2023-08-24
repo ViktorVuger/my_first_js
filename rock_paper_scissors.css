@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 body {
     border:  3px solid red;
 
@@ -10,19 +10,28 @@ header {
     border:  3px solid red;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    background-color: rgb(1, 2, 16);
 }
 
 .header_content {
+    color: whitesmoke;
     border:  3px solid red;
-    width: auto;
+    margin: auto;
+    padding: 50px;
+    width: 700px;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
 
+#header_text {
+    font-size: 45px;
+    padding-bottom: 0;
 }
 
 .box {
     border: 2px solid brown;
-    height: 200px;
-    width: 200px;
+    height: 400px;
+    width: 400px;
 }
 
 div {
@@ -37,20 +46,43 @@ div {
 #hp_box {
     display: flex;
     flex-direction: column;
+    width: 600px;
+
+    position: relative;
+    
 }
 
 .hp_bar {
     width: 100px;
     height: 50px;
+
+    margin-bottom: 15%;
+    margin-top: 15%;
+}
+
+#hp_computer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: aqua;
 }
 
 #box_main {
     width: 100%;
-    height: 300px;
+    height: 880px;
+
+    background-image:url('bg_rain.gif'); background-repeat:repeat;
+
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    align-items: center;
+
+  
+
+
+
 }
 
 .buttons {
